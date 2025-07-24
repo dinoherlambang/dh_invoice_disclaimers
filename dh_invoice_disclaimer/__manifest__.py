@@ -52,4 +52,5 @@ For more details, see the README file included with this module.
     'auto_install': False,
     'application': False,
     'license': 'LGPL-3',
+    'images': ['static/description/banner.png'],
 }
