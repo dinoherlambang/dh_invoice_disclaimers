@@ -51,4 +51,5 @@ For more details, see the README file included with this module.
     'installable': True,
     'auto_install': False,
     'application': False,
+    'license': 'LGPL-3',
 }
