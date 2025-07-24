@@ -103,7 +103,7 @@ For support and customization requests, please contact your Odoo developer or sy
 
 ## Author
 
-This module is maintained by: **Dino Herlmanbang**  
+This module is maintained by: **Dino Herlambang**  
 GitHub: [https://github.com/dinoherlambang](https://github.com/dinoherlambang)
 
 ## License
