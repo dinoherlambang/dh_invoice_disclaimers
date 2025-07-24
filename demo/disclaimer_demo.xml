@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Demo Disclaimers -->
+        <record id="disclaimer_demo_retail" model="invoice.disclaimer">
+            <field name="name">Retail Customer Disclaimer</field>
+            <field name="content"><![CDATA[
+                <p><strong>Retail Terms:</strong></p>
+                <p>All sales are final. Returns accepted within 30 days with original receipt. 
+                Warranty terms apply as per manufacturer specifications.</p>
+            ]]></field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="disclaimer_demo_wholesale" model="invoice.disclaimer">
+            <field name="name">Wholesale Customer Disclaimer</field>
+            <field name="content"><![CDATA[
+                <p><strong>Wholesale Terms:</strong></p>
+                <p>Prices are valid for 30 days. Bulk discount rates apply. 
+                Delivery terms: FOB shipping point. Payment terms: Net 30 days.</p>
+            ]]></field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Demo Partners with Disclaimers -->
+        <record id="demo_partner_retail" model="res.partner">
+            <field name="name">Demo Retail Customer</field>
+            <field name="email">retail@demo.com</field>
+            <field name="is_company">True</field>
+            <field name="invoice_disclaimer_id" ref="disclaimer_demo_retail"/>
+        </record>
+
+        <record id="demo_partner_wholesale" model="res.partner">
+            <field name="name">Demo Wholesale Customer</field>
+            <field name="email">wholesale@demo.com</field>
+            <field name="is_company">True</field>
+            <field name="invoice_disclaimer_id" ref="disclaimer_demo_wholesale"/>
+        </record>
+    </data>
+</odoo>

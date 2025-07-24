@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Default Disclaimer Data -->
+        <record id="disclaimer_default" model="invoice.disclaimer">
+            <field name="name">Default Business Disclaimer</field>
+            <field name="content"><![CDATA[
+                <p><strong>Important Notice:</strong></p>
+                <p>This invoice is subject to our standard terms and conditions. Payment is due within 30 days of invoice date. 
+                Late payments may incur additional charges as per our payment policy.</p>
+            ]]></field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="disclaimer_legal" model="invoice.disclaimer">
+            <field name="name">Legal Services Disclaimer</field>
+            <field name="content"><![CDATA[
+                <p><strong>Legal Services Disclaimer:</strong></p>
+                <p>The services provided are for informational purposes only and do not constitute legal advice. 
+                Client acknowledges that attorney-client privilege applies to all communications and documents.</p>
+            ]]></field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="disclaimer_consulting" model="invoice.disclaimer">
+            <field name="name">Consulting Services Disclaimer</field>
+            <field name="content"><![CDATA[
+                <p><strong>Consulting Disclaimer:</strong></p>
+                <p>All recommendations and advice provided are based on information available at the time of service. 
+                Results may vary and cannot be guaranteed. Client assumes responsibility for implementation decisions.</p>
+            ]]></field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

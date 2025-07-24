@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Partner Form to Add Disclaimer Field -->
+        <record id="view_partner_form_disclaimer" model="ir.ui.view">
+            <field name="name">res.partner.form.disclaimer</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <page name="sales_purchases" position="after">
+                    <page string="Invoice Settings" name="invoice_settings" attrs="{'invisible': [('is_company', '=', False), ('parent_id', '!=', False)]}">
+                        <group>
+                            <group string="Invoice Disclaimer">
+                                <field name="invoice_disclaimer_id" 
+                                       placeholder="Select a disclaimer for this customer's invoices..."
+                                       options="{'no_create': True, 'no_edit': True}"/>
+                            </group>
+                        </group>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+        <!-- Add Disclaimer Field to Partner Tree (Optional) -->
+        <record id="view_partner_tree_disclaimer" model="ir.ui.view">
+            <field name="name">res.partner.tree.disclaimer</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <field name="display_name" position="after">
+                    <field name="invoice_disclaimer_id" optional="hide"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

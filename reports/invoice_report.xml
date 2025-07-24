@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Invoice Report Template -->
+        <template id="report_invoice_document_disclaimer" inherit_id="account.report_invoice_document">
+            <!-- Add disclaimer at the end of the main content -->
+            <xpath expr="//div[@class='page']" position="inside">
+                <div t-if="o.invoice_disclaimer" style="page-break-inside: avoid; margin-top: 30px;">
+                    <hr style="margin-bottom: 15px; border-top: 1px solid #ddd;"/>
+                    <div class="text-center" style="font-size: 11px; color: #666;">
+                        <!-- <strong>Disclaimer:</strong> -->
+                        <div t-field="o.invoice_disclaimer" style="margin-top: 8px; text-align: justify;"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>
